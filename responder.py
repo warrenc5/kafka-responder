@@ -44,7 +44,7 @@ def pid():
     pidfile = "responder.pid"
 
     if os.path.isfile(pidfile):
-        print "%s already exists, exiting" % pidfile
+        print ("%s already exists, exiting" % pidfile)
         sys.exit()
 
     file(pidfile, 'w').write(pid)
@@ -67,7 +67,7 @@ def run():
             time.sleep(2)
             count = count +1 
             if count > 5: 
-                raise ValueError, "nothing read for too long"
+                raise ValueError("nothing read for too long")
         except Exception as e:
             print ('-',e)
             raise e
